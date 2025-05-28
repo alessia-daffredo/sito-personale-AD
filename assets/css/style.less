@@ -1,0 +1,89 @@
+@background: #0f172a;
+@foreground: #f1f5f9;
+@primary: #38bdf8;
+@secondary: #64748b;
+@header-bg: #1e293b;
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: @background;
+  color: @foreground;
+}
+
+header {
+  background-color: @header-bg;
+  padding: 1em;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav a {
+  color: @background;
+  background-color: @primary;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+
+  &:hover {
+    background-color: @secondary;
+    color: @foreground;
+  }
+}
+
+.profile-photo {
+  width: 200px;
+  border-radius: 12px;
+  border: 2px solid @primary;
+  margin-bottom: 1em;
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  input,
+  textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+  }
+
+  button {
+    background-color: @primary;
+    color: @background;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+
+    &:hover {
+      background-color: @secondary;
+    }
+  }
+}
+
+ul {
+  padding-left: 1.2rem;
+
+  li {
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  nav a {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+  }
+}
